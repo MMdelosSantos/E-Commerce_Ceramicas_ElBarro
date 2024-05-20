@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import './Navbar.css'
 
 
 const Menu = () => {
@@ -13,7 +14,11 @@ const Menu = () => {
         <div>
             <Navbar expand="lg" className="bg-body-tertiary">
                 <Container fluid>
-                    <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+                    <Navbar.Brand href="/">
+                        <img src="/Logo_color.png"
+                            width="50" height="50"
+                            alt="Logo" />
+                        Cerámicas El Barro</Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -21,36 +26,27 @@ const Menu = () => {
                             style={{ maxHeight: '100px' }}
                             navbarScroll
                         >
-                            <Nav.Link href="#action1">Home</Nav.Link>
-                            <Nav.Link href="#action2">Link</Nav.Link>
-                            <NavDropdown title="Link" id="navbarScrollingDropdown">
-                                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">
-                                    Another action
-                                </NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action5">
-                                    Something else here
-                                </NavDropdown.Item>
-                            </NavDropdown>
-                            <Nav.Link href="#" disabled>
-                                Link
-                            </Nav.Link>
+                            <Nav.Link className="nav-link" href="/">Inicio</Nav.Link>
+                            <Nav.Link className="nav-link"  href="#action2">Piezas Menaje</Nav.Link>
+                            <Nav.Link className="nav-link" href="#action2">Piezas Decoración</Nav.Link>
+                            <Nav.Link className="nav-link" href="#action2">Piezas Joyería</Nav.Link>
+                            <Nav.Link className="nav-link" href="#action2">Herramientas</Nav.Link>
+                            <Nav.Link className="nav-link" href="#action2">Esmaltes y Pigmentos</Nav.Link>
                         </Nav>
                         <Form className="d-flex">
                             <Form.Control
                                 type="search"
-                                placeholder="Search"
+                                placeholder="Buscar"
                                 className="me-2"
                                 aria-label="Search"
                             />
-                            <Button variant="outline-success">Search</Button>
+                            <Button id='btn-buscar' variant="outline-success">Buscar</Button>
                         </Form>
                         <CartWidget />
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-            
+
         </div>)
 }
 

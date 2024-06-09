@@ -15,7 +15,7 @@ export const getProductsByCategory = (category) => {
 });
 }
 
-export const getProductsById = (id) => {
+export const getProductById = (id) => {
     return new Promise ((res) => {
         const productoFiltrado = productos.find ((prod) => prod.id=== parseInt(id))
         setTimeout(() => { 
@@ -23,7 +23,6 @@ export const getProductsById = (id) => {
         }, 2000);
 });
 }
-
 
 
 const productos = [
@@ -34,6 +33,7 @@ const productos = [
         subcategoria: "Esmaltes",
         descripcion: "Esmalte apto para pintar cerámicas con acabado mate. Diversos colores.",
         precio: 160,
+        stock:5,
         imagen: "producto_1.png"
     },
     {
@@ -43,6 +43,7 @@ const productos = [
         subcategoria: "Pigmentos",
         descripcion: "Pigmento apto para pintar cerámica. Diversos colores.",
         precio: 200,
+        stock:4,
         imagen: "producto_2.png"
     },
     {
@@ -52,6 +53,7 @@ const productos = [
         subcategoria: "Pigmentos",
         descripcion: "Pigmentos para cerámica en tonos pastel.",
         precio: 1300,
+        stock:7,
         imagen: "producto_3.jpg"
     },
     {
@@ -61,6 +63,7 @@ const productos = [
         subcategoria: "Esmaltes",
         descripcion: "Esmalte para cerámica de acabado brillante de baja opacidad. Diversos colores.",
         precio: 250,
+        stock:10,
         imagen: "producto_4.png"
     },
     {
@@ -70,6 +73,7 @@ const productos = [
         subcategoria: "Esmaltes",
         descripcion: "Esmalte para cerámica de acabado brillante en diversos colores.",
         precio: 300,
+        stock:5,
         imagen: "producto_5.png"
     },
     {
@@ -79,6 +83,7 @@ const productos = [
         subcategoria: "Esmaltes",
         descripcion: "Esmaltes marca TP para cerámica. Diversos colores.",
         precio: 480,
+        stock: 13,
         imagen: "producto_6.png"
     },
     {
@@ -88,6 +93,7 @@ const productos = [
         subcategoria: "Pigmentos",
         descripcion: "Set que contiene 24 pigmentos aptos para cerámica.",
         precio: 2500,
+        stock:2,
         imagen: "producto_7.png"
     },
     {
@@ -97,6 +103,7 @@ const productos = [
         subcategoria: "Esmaltes",
         descripcion: "Esmaltes para pintar cérmica, diversos colores.",
         precio: 150,
+        stock:15,
         imagen: "producto_8.png"
     },
     {
@@ -106,6 +113,7 @@ const productos = [
         subcategoria: "Cortantes",
         descripcion: "Rodillo para cortar láminas de cerámica.",
         precio: 2500,
+        stock:7,
         imagen: "producto_9.png"
     },
     {
@@ -115,6 +123,7 @@ const productos = [
         subcategoria: "Herramientas",
         descripcion: "Desbastadores de distintas formas para cerámica.",
         precio: 150,
+        stock:1,
         imagen: "producto_10.png"
     },
     {
@@ -124,6 +133,7 @@ const productos = [
         subcategoria: "Herramientas",
         descripcion: "Sello para dar textura de hoja a las cerámica.",
         precio: 350,
+        stock:9,
         imagen: "producto_11.jpg"
     },
     {
@@ -133,6 +143,7 @@ const productos = [
         subcategoria: "Cortantes",
         descripcion: "Set de cortantes para cerámica con forma de corazón, diversos tamaños y formas.",
         precio: 800,
+        stock:2,
         imagen: "producto_12.png"
     },
     {
@@ -142,6 +153,7 @@ const productos = [
         subcategoria: "Herramientas",
         descripcion: "Rodillo para aportar textura a la cerámica, con forma de triangulo.",
         precio: 300,
+        stock:15,
         imagen: "producto_13.png"
     },
     {
@@ -151,6 +163,7 @@ const productos = [
         subcategoria: "Cortantes",
         descripcion: "Set de cortantes pequeños para cerámica con diversos tamaños.",
         precio: 870,
+        stock:6,
         imagen: "producto_14.png"
     },
     {
@@ -160,6 +173,7 @@ const productos = [
         subcategoria: "Herramientas",
         descripcion: "Set de 6 rodillos para aportar textura a la cerámica, motivos variados.",
         precio: 1500,
+        stock:4,
         imagen: "producto_15.jpg"
     },
     {
@@ -169,7 +183,8 @@ const productos = [
         subcategoria: "Herramientas",
         descripcion: "Raspadores de metal para cerámica, con diversas formas.",
         precio: 500,
-        imagen: "producto_16.png"
+        stock:3,
+        imagen: "producto_16.jpg"
     },
     {
         id: 17,
@@ -178,6 +193,7 @@ const productos = [
         subcategoria: "Bandejas",
         descripcion: "Bandejas con forma de hoja para decorar o contrener pequeños elementos.",
         precio: 620,
+        stock:1,
         imagen: "producto_17.png"
     },
     {
@@ -187,6 +203,7 @@ const productos = [
         subcategoria: "Candelabros",
         descripcion: "Candelabro para 1 vela con diversos colores y motivos.",
         precio: 780,
+        stock:3,
         imagen: "producto_18.png"
     },
     {
@@ -196,6 +213,7 @@ const productos = [
         subcategoria: "Decoracion de pared",
         descripcion: "Decoración de pared de cerámica con forma de medusas  en diversos tonos de gris.",
         precio: 1350,
+        stock:1,
         imagen: "producto_19.png"
     },
     {
@@ -205,6 +223,7 @@ const productos = [
         subcategoria: "Floreros",
         descripcion: "Set de floreros de cerámica con forma de libros. Diversos colores.",
         precio: 1500,
+        stock:4,
         imagen: "producto_20.jpg"
     },
     {
@@ -214,6 +233,7 @@ const productos = [
         subcategoria: "Portapinceles",
         descripcion: "Portapincel de cerámica en diversos colores y tamaño.",
         precio: 500,
+        stock:10,
         imagen: "producto_21.jpg"
     },
     {
@@ -223,6 +243,7 @@ const productos = [
         subcategoria: "Servilleteros",
         descripcion: "Servilletero de cerámica blanco con gotas de colores.",
         precio: 380,
+        stock:9,
         imagen: "producto_22.png"
     },
     {
@@ -232,6 +253,7 @@ const productos = [
         subcategoria: "Floreros",
         descripcion: "Florero de cerámica en color blanco con formas modernas.",
         precio: 500,
+        stock:2,
         imagen: "producto_23.png"
     },
     {
@@ -241,6 +263,7 @@ const productos = [
         subcategoria: "Anillos",
         descripcion: "Anillo de cerámica en color blanco y dorado",
         precio: 570,
+        stock:13,
         imagen: "producto_24.jpg"
     },
     {
@@ -250,6 +273,7 @@ const productos = [
         subcategoria: "Aretes",
         descripcion: "Aretes de cerámica con forma circular, de color blanco, azul y dorado.",
         precio: 380,
+        stock:5,
         imagen: "producto_25.jpg"
     },
     {
@@ -259,6 +283,7 @@ const productos = [
         subcategoria: "Collares",
         descripcion: "Collar con flores de cerámica blancas.",
         precio: 630,
+        stock:1,
         imagen: "producto_26.jpg"
     },
     {
@@ -268,6 +293,7 @@ const productos = [
         subcategoria: "Pulseras",
         descripcion: "Pulsera de cerámica con diversos colores y motivos.",
         precio: 270,
+        stock:6,
         imagen: "producto_27.png"
     },
     {
@@ -277,6 +303,7 @@ const productos = [
         subcategoria: "Collares",
         descripcion: "Collar con colgante azul de cerámica",
         precio: 500,
+        stock:1,
         imagen: "producto_28.png"
     },
     {
@@ -286,6 +313,7 @@ const productos = [
         subcategoria: "Aretes",
         descripcion: "Aretes de cerámica circulares con flores azules.",
         precio: 280,
+        stock:8,
         imagen: "producto_29.png"
     },
     {
@@ -295,6 +323,7 @@ const productos = [
         subcategoria: "Anillos",
         descripcion: "Anillo de cerámica en varios colores.",
         precio: 450,
+        stock:5,
         imagen: "producto_30.png"
     },
     {
@@ -304,6 +333,7 @@ const productos = [
         subcategoria: "Collares",
         descripcion: "Collar de cerámica con flor y paloma, color gris.",
         precio: 340,
+        stock:2,
         imagen: "producto_31.png"
     },
     {
@@ -313,7 +343,8 @@ const productos = [
         subcategoria: "Compoteras",
         descripcion: "Juego de compoteras en cerámica, de color  blanco por fuera y rosada en su interior.",
         precio: 1500,
-        imagen: "producto_32.png"
+        stock:6,
+        imagen: "producto_32.jpg"
     },
     {
         id: 33,
@@ -322,6 +353,7 @@ const productos = [
         subcategoria: "Jarras",
         descripcion: "Jarra de cerámica blanca con líneas verticales en azul.",
         precio: 780,
+        stock:4,
         imagen: "producto_33.png"
     },
     {
@@ -331,6 +363,7 @@ const productos = [
         subcategoria: "Calderas",
         descripcion: "Caldera de cerámica con forma de calabaza, color blanco y marrón.",
         precio: 1200,
+        stock:7,
         imagen: "producto_34.png"
     },
     {
@@ -340,6 +373,7 @@ const productos = [
         subcategoria: "Portatortas",
         descripcion: "Portatorta de cerámica de color rosado con lineas verticales en terracota.",
         precio: 1500,
+        stock:1,
         imagen: "producto_35.jpg"
     },
     {
@@ -349,6 +383,7 @@ const productos = [
         subcategoria: "Contenedores",
         descripcion: "Frasco contenedor de cerámica blanca con puntos marrones.",
         precio: 800,
+        stock:3,
         imagen: "producto_36.png"
     },
     {
@@ -358,6 +393,7 @@ const productos = [
         subcategoria: "Platos",
         descripcion: "Plato de cerámica en varios colores.",
         precio: 300,
+        stock:17,
         imagen: "producto_37.png"
     },
     {
@@ -367,6 +403,7 @@ const productos = [
         subcategoria: "Tazas",
         descripcion: "Juego de tazas de cerámica blanca con textura.",
         precio: 950,
+        stock:6,
         imagen: "producto_38.png"
     },
     {
@@ -376,6 +413,7 @@ const productos = [
         subcategoria: "Contenedores",
         descripcion: "Mantequera o contenedor de cerámica rosada y blanca.",
         precio: 500,
+        stock:12,
         imagen: "producto_39.jpg"
     },
     {
@@ -385,6 +423,7 @@ const productos = [
         subcategoria: "Contenedores",
         descripcion: "Contenedor de cerámica con motivos florales.",
         precio: 1200,
+        stock:15,
         imagen: "producto_40.jpg"
     },
 ];

@@ -7,8 +7,7 @@ import {
     MenuItem,
     Button,
     Flex,
-    Image,
-    Box,
+    Image
 } from '@chakra-ui/react'
 import { FaArrowDown } from "react-icons/fa";
 import { Link } from 'react-router-dom';

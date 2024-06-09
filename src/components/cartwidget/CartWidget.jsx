@@ -1,10 +1,15 @@
-import React from 'react';
-import { ImCart } from "react-icons/im";
+import React from "react";
+import { Box } from "@chakra-ui/react";
+import { LiaCartArrowDownSolid } from "react-icons/lia";
 
 const CartWidget = () => {
   return (
-    <div className='carrito'><ImCart /></div>
-  )
-}
+    <Box m={4}
+      fontSize={'7vh'}
+      color={'#084E54'}>
+      <LiaCartArrowDownSolid />
+    </Box>
+  );
+};
 
-export default CartWidget
+export default CartWidget;

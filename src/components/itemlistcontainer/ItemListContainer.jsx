@@ -10,8 +10,6 @@ const ItemListContainer = ({ title }) => {
   const [loading, setLoading] = useState(true)
   const { categoryId } = useParams()
 
-  console.log(categoryId)
-
   useEffect(() => {
     setLoading(true)
     const dataProductos = categoryId ? getProductsByCategory(categoryId) : getProducts()

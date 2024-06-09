@@ -1,9 +1,11 @@
-import { Flex, Button, Link } from '@chakra-ui/react'
+import { Flex, Button} from '@chakra-ui/react'
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 const Item = ({ id, nombre, descripcion, categoria, subcategoria, precio, imagen }) => {
   const rutaImagen = `/imagenes/${imagen}`
+  
+
 
   return (
     <div>

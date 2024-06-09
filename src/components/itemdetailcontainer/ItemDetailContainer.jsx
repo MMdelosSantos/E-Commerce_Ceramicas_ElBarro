@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getProductsById } from '../../data/asyncMock'
+import { getProductById } from '../../data/asyncMock'
 import { Spinner, Flex } from '@chakra-ui/react'
 import ItemDetail from '../itemdetail/ItemDetail'
-import PageNotFound from '../pagenotfound/PageNotFound'
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([])
@@ -12,7 +11,7 @@ const ItemDetailContainer = () => {
 
     const navigate = useNavigate()
     useEffect(() => {
-        getProductsById(productId)
+        getProductById(productId)
             .then((data) => {
                 if (!data) {
                     navigate('/*')
@@ -24,6 +23,8 @@ const ItemDetailContainer = () => {
             .finally(() => setLoading(false))
     }, [])
 
+    
+    console.log(producto)
     return (
         <>
             {

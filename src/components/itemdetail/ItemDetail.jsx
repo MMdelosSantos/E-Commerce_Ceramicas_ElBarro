@@ -1,20 +1,25 @@
-import { React, Box } from 'react'
+import { React} from 'react'
 import ItemCount from '../itemcount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify'
+import { Box } from '@chakra-ui/react'
 
 
 const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, imagen, stock }) => {
 
     const onAdd = (quantity) => {
-        toast(`Agregaste ${quantity} unidades`)
+        toast(`Agregaste ${quantity} unidad/es`)
     }
+
+    const rutaImagen = `/imagenes/${imagen}`
 
     return (
         <Box>
-            nombre:{nombre}
-            <ItemCount stock={stock} valorInicial={1} onAdd={onAdd}></ItemCount>
-            <ToastContainer>
-            </ToastContainer>
+            Artículo:{nombre}
+            Descripción:{descripcion}
+            Precio en $ UYU: {precio}
+            <img src={rutaImagen} alt='Imagen de producto Cerámicas El Barro'></img>
+            <ItemCount stock={stock} valorInicial={1} onAdd={onAdd}/>
+            <ToastContainer/>
         </Box>
     )
 }

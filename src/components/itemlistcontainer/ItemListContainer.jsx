@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Heading, Flex, Center } from "@chakra-ui/react";
+import { Heading, Flex, Spinner, Box } from "@chakra-ui/react";
 import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../itemlist/ItemList";
 import { useParams } from "react-router-dom";
-import { Spinner } from '@chakra-ui/react'
+
 
 const ItemListContainer = ({ title }) => {
   const [products, setProducts] = useState([])
@@ -22,16 +22,18 @@ const ItemListContainer = ({ title }) => {
 
 
   return (
-    <Flex direction={'column'} justify={'center'} align={'center'} bgColor={'#FFF1D2'}>
-      <Heading color={'#084E54'}>{title}</Heading>
-      {
-        loading ?
-          <Flex justify={'center'} align={'center'} h={'100%'}><Spinner color='#EA9AB2' size={'xl'} />
-          </Flex>
-          :
-          <ItemList products={products} />
-      }
-    </Flex>
+    <Box bgColor={'#FFF1D2'}>
+      <Flex direction={'column'} justify={'center'} w={'100%'}>
+        <Heading color={'#084E54'}>{title}</Heading>
+        {
+          loading ?
+            <Flex justify={'center'} align={'center'} h={'100%'}><Spinner color={'#EA9AB2'} size={'xl'} />
+            </Flex>
+            :
+            <ItemList products={products} />
+        }
+      </Flex>
+    </Box>
   );
 };
 

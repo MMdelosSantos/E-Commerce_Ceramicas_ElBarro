@@ -23,7 +23,7 @@ const ItemDetailContainer = () => {
             .finally(() => setLoading(false))
     }, [])
 
-    
+
     console.log(producto)
     return (
         <>
@@ -33,7 +33,6 @@ const ItemDetailContainer = () => {
                     </Flex>
                     :
                     <ItemDetail {...producto} />
-
             }
         </>
     )

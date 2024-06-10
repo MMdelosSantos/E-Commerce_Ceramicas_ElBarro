@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/' element={<ItemListContainer title={"Cerámicas El Barro"} />} />
+          <Route path='/' element={<ItemListContainer title={"Cerámicas El Barro"}  />} />
           <Route path='/categorias/:categoryId' element={<ItemListContainer title={"Cerámicas El Barro"} />} />
           <Route path='/producto/:productId' element={<ItemDetailContainer />} />
           <Route path='*' element={<PageNotFound />} />

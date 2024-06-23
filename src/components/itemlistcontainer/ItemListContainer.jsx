@@ -23,7 +23,7 @@ const ItemListContainer = ({ title }) => {
 
   return (
     <Box bgColor={'#FFF1D2'}>
-      <Flex direction={'column'} justify={'center'} w={'100%'}>
+      <Flex direction={'column'} justify={'center'} w={'100%'} m={'2px'}>
         <Heading color={'#084E54'}>{title}</Heading>
         {
           loading ?

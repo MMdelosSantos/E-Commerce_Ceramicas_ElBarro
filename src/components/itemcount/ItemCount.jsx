@@ -26,7 +26,7 @@ const ItemCount = ({ stock, valorInicial, onAdd }) => {
         </Flex>
     )
     return (
-        <div>ItemCount</div>
+        <Flex>ItemCount</Flex>
     )
 }
 

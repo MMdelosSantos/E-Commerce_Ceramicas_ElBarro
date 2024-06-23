@@ -9,7 +9,6 @@ import {
     Tr,
     Th,
     Td,
-    TableCaption,
     TableContainer,
     Button,
     Flex
@@ -30,8 +29,7 @@ const Cart = () => {
     } else {
         return (
             <TableContainer>
-                <Table variant='striped' colorScheme='teal'>
-                    <TableCaption>Imperial to metric conversion factors</TableCaption>
+                <Table variant='striped' colorScheme= 'pink'>
                     <Thead>
                         <Tr>
                             <Th>Nombre</Th>

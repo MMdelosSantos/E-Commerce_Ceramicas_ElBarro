@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Heading, Flex, Spinner, Box } from "@chakra-ui/react";
-import { getProducts, getProductsByCategory } from "../../data/asyncMock";
 import ItemList from "../itemlist/ItemList";
 import { useParams } from "react-router-dom";
+import { db } from "../../config/firebase";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 
 const ItemListContainer = ({ title }) => {
@@ -12,12 +13,29 @@ const ItemListContainer = ({ title }) => {
 
   useEffect(() => {
     setLoading(true)
-    const dataProductos = categoryId ? getProductsByCategory(categoryId) : getProducts()
+    const getData = async () => {
+      const coleccion = collection(db, 'productos')
+      const queryRef = !categoryId ?
+        coleccion
+        :
+        query(coleccion, where('categoria', '==', categoryId))
 
-    dataProductos
-      .then((data) => setProducts(data))
-      .catch((error) => console.log(error))
-      .finally(() => setLoading(false))
+      const response = await getDocs(queryRef)
+   
+    const productos = response.docs.map((doc) => {
+      const newItem = {
+        ...doc.data(),
+        id: doc.id
+      }
+      return newItem
+    })
+    setProducts(productos)
+    setLoading(false)
+  }
+
+
+    getData()
+
   }, [categoryId])
 
 

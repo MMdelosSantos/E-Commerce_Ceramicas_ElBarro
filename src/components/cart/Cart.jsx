@@ -15,6 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { IoTrashBin } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import Checkout from '../checkout/Checkout';
 
 
 const Cart = () => {
@@ -58,7 +59,7 @@ const Cart = () => {
                         <Tr>
                             <Th><Button onClick={() => clearCart()}>Vaciar el Carrito</Button></Th>
                             <Th><Heading>{getTotal()}</Heading></Th>
-                            <Th><Link to=''>Finalizar compra</Link></Th>
+                            <Th><Link to='/Checkout'>Finalizar compra</Link></Th>
                         </Tr>
                     </Tfoot>
                 </Table>

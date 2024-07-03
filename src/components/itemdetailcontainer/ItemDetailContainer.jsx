@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { getProductById } from '../../data/asyncMock'
 import { Spinner, Flex } from '@chakra-ui/react'
 import ItemDetail from '../itemdetail/ItemDetail'
+import { db } from '../../config/firebase'
+import { doc, getDoc } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState([])
@@ -11,16 +12,20 @@ const ItemDetailContainer = () => {
 
     const navigate = useNavigate()
     useEffect(() => {
-        getProductById(productId)
-            .then((data) => {
-                if (!data) {
-                    navigate('/*')
-                } else {
-                    setProducto(data)
-                }
-            })
-            .catch((error) => console.log(error))
-            .finally(() => setLoading(false))
+        const getData = async () => {
+
+            const queryRef = doc(db, 'productos', productId)
+
+            const response = await getDoc(queryRef)
+
+            const newItem = {
+                ...response.data(),
+                id: response.id
+            }
+            setProducto(newItem)
+            setLoading(false)
+        }
+        getData()
     }, [])
 
 

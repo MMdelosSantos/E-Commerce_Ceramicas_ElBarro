@@ -1,7 +1,7 @@
 import { React, useContext, useState } from 'react'
 import ItemCount from '../itemcount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify'
-import { Flex, Box, Card, CardBody, CardFooter, CardHeader, Image, Stack, Text, Divider, Heading, Button } from '@chakra-ui/react'
+import { Flex, Card, CardBody, CardFooter, CardHeader, Image, Stack, Text, Divider, Heading, Button } from '@chakra-ui/react'
 import Context from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 

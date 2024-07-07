@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import {useParams } from 'react-router-dom'
 import { Spinner, Flex } from '@chakra-ui/react'
 import ItemDetail from '../itemdetail/ItemDetail'
 import { db } from '../../config/firebase'
@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true)
     const { productId } = useParams()
 
-    const navigate = useNavigate()
+    //const navigate = useNavigate()
     useEffect(() => {
         const getData = async () => {
 
@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
             setLoading(false)
         }
         getData()
-    }, [])
+    }, [productId])
 
 
     console.log(producto)

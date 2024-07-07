@@ -25,7 +25,7 @@ const Checkout = () => {
     })
 
     const [error, setError] = useState({})
-    const [loading, setLoading] = useState(false)
+    //const [loading, setLoading] = useState(false)
 
     const { cart, getTotal, clearCart } = useContext(Context)
     const navigate = useNavigate()

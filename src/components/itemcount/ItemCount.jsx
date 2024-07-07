@@ -25,9 +25,9 @@ const ItemCount = ({ stock, valorInicial, onAdd }) => {
 
         </Flex>
     )
-    return (
-        <Flex>ItemCount</Flex>
-    )
+    //return (
+    //    <Flex>ItemCount</Flex>
+    //)
 }
 
 export default ItemCount

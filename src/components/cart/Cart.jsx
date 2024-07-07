@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { IoTrashBin } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import Checkout from '../checkout/Checkout';
+//import Checkout from '../checkout/Checkout';
 
 
 const Cart = () => {

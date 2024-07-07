@@ -50,10 +50,10 @@ const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, 
                     {
                         cantidad > 0 ?
                         <Flex>
-                            <Button>
+                            <Button m={'5px'} color={'#ffff'} bgColor={'#EA9AB2'}>
                                 <Link to='/Cart'> Ir al carrito </Link>
                             </Button>
-                            <Button>
+                            <Button m={'5px'} color={'#ffff'} bgColor={'#EA9AB2'}>
                             <Link to='/'> Seguir comprando </Link>
                             </Button>
                             </Flex>

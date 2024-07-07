@@ -40,9 +40,9 @@ const ItemListContainer = ({ title }) => {
 
 
   return (
-    <Box bgColor={'#FFF1D2'}>
-      <Flex direction={'column'} justify={'center'} w={'100%'} m={'2px'}>
-        <Heading color={'#084E54'}>{title}</Heading>
+    <Box bgColor={'#FFF1D2'}  minH="100vh">
+      <Flex direction={'column'} justify={'center'} w={'100%'} h={'100%'}>
+        <Heading color={'#084E54'} margin={'1%'}>{title}</Heading>
         {
           loading ?
             <Flex justify={'center'} align={'center'} h={'100%'}><Spinner color={'#EA9AB2'} size={'xl'} />

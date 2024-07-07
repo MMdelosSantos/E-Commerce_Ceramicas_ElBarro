@@ -4,7 +4,7 @@ import Item from "../item/Item"
 
 const ItemList = ({ products }) => {
     return (
-        <div><SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))'>
+        <Box m={'2.5vh'}><SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(200px, 1fr))' >
             {
                 products.map((prod) => (
                     <Box key={prod.id}>
@@ -12,7 +12,7 @@ const ItemList = ({ products }) => {
                     </Box>
                 ))
             }</SimpleGrid>
-        </div>
+        </Box>
     )
 }
 

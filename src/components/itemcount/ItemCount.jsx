@@ -1,4 +1,4 @@
-import { Flex, Button } from '@chakra-ui/react'
+import { Flex, Button, Heading } from '@chakra-ui/react'
 import React, { useState } from 'react'
 
 
@@ -17,12 +17,10 @@ const ItemCount = ({ stock, valorInicial, onAdd }) => {
 
     return (
         <Flex>
-            <Button onClick={decrementar}>-</Button>
-            {count}
-            <Button onClick={incrementar}>+</Button>
-
-            <Button onClick={() => onAdd(count)}>Agregar al pedido</Button>
-
+            <Button onClick={decrementar} m={'5px'} color={'#ffff'} bgColor={'#EA9AB2'}>-</Button>
+            <Heading color={'#17AFBD'}>{count}</Heading>
+            <Button onClick={incrementar} m={'5px'} color={'#ffff'} bgColor={'#EA9AB2'}>+</Button>
+            <Button onClick={() => onAdd(count)} m={'5px'} color={'#ffff'} bgColor={'#EA9AB2'}>Agregar al pedido</Button>
         </Flex>
     )
     //return (

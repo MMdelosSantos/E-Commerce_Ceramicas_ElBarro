@@ -7,18 +7,18 @@ import { Link } from "react-router-dom";
 const CartWidget = () => {
   const { getQuantity } = useContext(Context)
   return (
-    <Flex
+    <Flex align={'center'} justify={'center'}
     >
-    <Box m={4}
+    <Flex m={4}
       fontSize={'7vh'}
-      color={'#084E54'}
+      color={'#084E54'} align={'center'}
       >
-      <Link to='/cart'>
-        <LiaCartArrowDownSolid /></Link>
       <Box fontSize={'4vh'}>
         <Box>{getQuantity() > 0 && getQuantity()}</Box>
       </Box>
-    </Box>
+      <Link to='/cart'>
+        <LiaCartArrowDownSolid /></Link>
+    </Flex>
     </Flex>
   );
 };

@@ -1,8 +1,8 @@
-import { Flex, Button, Card, CardHeader, Image, Stack, Heading, Text, Divider, ButtonGroup, CardBody, CardFooter, SimpleGrid } from '@chakra-ui/react'
+import {  Button, Card, CardHeader, Image, Stack, Heading, Text, Divider, ButtonGroup, CardBody, CardFooter } from '@chakra-ui/react'
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, nombre, descripcion, categoria, subcategoria, precio, imagen }) => {
+const Item = ({ id, nombre, descripcion, categoria, subcategoria,stock, precio, imagen }) => {
   const rutaImagen = `/imagenes/${imagen}`
 
 

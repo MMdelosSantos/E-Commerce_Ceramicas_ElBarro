@@ -15,11 +15,11 @@ import {
 } from '@chakra-ui/react'
 import { IoTrashBin } from "react-icons/io5";
 import { Link } from 'react-router-dom';
-import Checkout from '../checkout/Checkout';
+//import Checkout from '../checkout/Checkout';
 
 
 const Cart = () => {
-    const { cart, removeItem, clearCart, getTotal } = useContext(Context)
+    const { cart, removeItem, clearCart, getTotal, incrementarItem, decrementarItem } = useContext(Context)
     if (cart.lenght === 0) {
         return(
         <Flex direction={'column'} justify={'center'} alig={'center'}>
@@ -35,6 +35,7 @@ const Cart = () => {
                         <Tr>
                             <Th>Nombre</Th>
                             <Th>Cantidad</Th>
+                            <Th></Th>
                             <Th>Precio</Th>
                             <Th>Subtotal</Th>
                             <Th></Th>
@@ -46,6 +47,10 @@ const Cart = () => {
                                 <Tr key={prod.id}>
                                     <Td>{prod.nombre}</Td>
                                     <Td>{prod.quantity}</Td>
+                                    <Td><Button onClick={() => decrementarItem(prod.id)}>-</Button>
+                                    {prod.quantity}
+                                    <Button onClick={() => incrementarItem(prod.id, prod.stock)}>+</Button>
+                                    </Td>
                                     <Td>{prod.precio}</Td>
                                     <Td>{prod.precio * prod.quantity}</Td>
                                     <Td><Button onClick={() => removeItem(prod.id)}>

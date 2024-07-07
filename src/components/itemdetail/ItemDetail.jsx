@@ -1,7 +1,7 @@
 import { React, useContext, useState } from 'react'
 import ItemCount from '../itemcount/ItemCount'
 import { ToastContainer, toast } from 'react-toastify'
-import { Flex, Box, Card, CardBody, CardFooter, CardHeader, Image, Stack, Text, Divider, Heading, Button } from '@chakra-ui/react'
+import { Flex, Card, CardBody, CardFooter, CardHeader, Image, Stack, Text, Divider, Heading, Button } from '@chakra-ui/react'
 import Context from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +15,8 @@ const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, 
         const item = {
             id,
             nombre,
-            precio
+            precio,
+            stock
         }
         addItem(item, quantity)
         toast(`Agregaste ${quantity} unidad/es`)
@@ -36,6 +37,8 @@ const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, 
                     />
                     <Stack mt='6' spacing='3'>
                         <Text> {descripcion}
+                        </Text>
+                        <Text> Stock disponible: {stock}
                         </Text>
                         <Text color={'#EA9AB2'} fontSize='2xl'>
                             UYU ${precio}

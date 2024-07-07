@@ -2,7 +2,7 @@ import { Flex, Button, Card, CardHeader, Image, Stack, Heading, Text, Divider, B
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, nombre, descripcion, categoria, subcategoria, precio, imagen }) => {
+const Item = ({ id, nombre, descripcion, categoria, subcategoria,stock, precio, imagen }) => {
   const rutaImagen = `/imagenes/${imagen}`
 
 

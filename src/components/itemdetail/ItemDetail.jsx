@@ -15,7 +15,8 @@ const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, 
         const item = {
             id,
             nombre,
-            precio
+            precio,
+            stock
         }
         addItem(item, quantity)
         toast(`Agregaste ${quantity} unidad/es`)
@@ -36,6 +37,8 @@ const ItemDetail = ({ id, nombre, categoria, subcategoria, descripcion, precio, 
                     />
                     <Stack mt='6' spacing='3'>
                         <Text> {descripcion}
+                        </Text>
+                        <Text> Stock disponible: {stock}
                         </Text>
                         <Text color={'#EA9AB2'} fontSize='2xl'>
                             UYU ${precio}

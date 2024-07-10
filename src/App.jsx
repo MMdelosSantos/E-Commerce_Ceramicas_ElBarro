@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
-import NavBar from './components/navbar/NavBar';
+import NavBar from '/components/navbar/NavBar';
 import { ChakraProvider } from '@chakra-ui/react'
 import ItemDetailContainer from './components/itemdetailcontainer/ItemDetailContainer';
 import 'react-toastify/dist/ReactToastify.css';

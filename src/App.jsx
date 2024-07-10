@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import ItemListContainer from './components/itemlistcontainer/ItemListContainer';
-import NavBar from '/src/components/navbar/NavBar';
+import NavBar from './components/navbar/NavBar.jsx';
 import { ChakraProvider } from '@chakra-ui/react'
 import ItemDetailContainer from './components/itemdetailcontainer/ItemDetailContainer';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +8,6 @@ import PageNotFound from './components/pagenotfound/PageNotFound';
 import { CartContextProvider } from './context/CartContext';
 import Cart from './components/cart/Cart';
 import Checkout from './components/checkout/Checkout';
-
 
 
 

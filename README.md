@@ -1,9 +1,7 @@
 # Tienda Cerámicas El Barro
 
-![image](./public/Logo_color.png)
-
 ### Deploy
-[E-Commerce Cerámicas el Barro]()
+[E-Commerce Cerámicas el Barro](https://e-commerce-ceramicas-el-barro.vercel.app/)
 
 ### Descripción
 E-Commerce de piezas de cerámica y herramientas para traajar dicho material. Creado para el curso de React  JS en Coderhouse.
